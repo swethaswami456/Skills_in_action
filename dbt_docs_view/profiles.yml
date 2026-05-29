@@ -1,6 +1,0 @@
-dbt_docs_view:
-  target: dev
-  outputs:
-    dev:
-      type: duckdb
-      path: "dbt_docs_view.duckdb"
