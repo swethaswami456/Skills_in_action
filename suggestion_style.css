@@ -1,0 +1,149 @@
+h1 {
+    color: blue;
+}
+
+/* New Suggestions */
+
+/* 🦷 1. Floating Teeth / Dental Icons
+
+Make images gently float up and down. */
+
+
+.floating {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* ✨ 2. Glassmorphism Cards */
+
+.service-card{
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* 🌈 3. Animated Gradient Background
+
+Instead of a static color, the background slowly changes. */
+
+body{
+    background: linear-gradient(
+        -45deg,
+        #00c6ff,
+        #0072ff,
+        #00d4ff,
+        #6dd5ed
+    );
+    background-size: 400% 400%;
+    animation: gradientShift 12s ease infinite;
+}
+
+@keyframes gradientShift{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* 💎 4. Hover Lift Effect
+
+Used almost everywhere. */
+
+.service-card{
+    transition: 0.3s;
+}
+
+.service-card:hover{
+    transform: translateY(-10px);
+}
+
+/* 🚀 5. Floating Action Button (Book Appointment)
+
+A fixed WhatsApp or Appointment button. */
+
+.book-btn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background:#00c853;
+    color:white;
+    padding:15px 20px;
+    border-radius:50px;
+    text-decoration:none;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* 🎥 6. Hero Section with Doctor Image
+
+Very common for clinics. */
+
+<section class="hero">
+    <div>
+       <h2>Your Perfect Smile Starts Here</h2>
+       <button>Book Appointment</button>
+    </div>
+
+    <img src="doctor.png" class="floating </img?
+</section>
+
+/* ⭐ 7. Testimonial Slider
+
+Show reviews automatically. 
+Auto-sliding testimonials make the site look professional.*/
+
+
+/* 🔢 8. Animated Statistics
+
+These catch attention immediately. */
+
+/* <h3>5000+ Happy Patients</h3>
+<h3>15+ Years Experience</h3>
+<h3>24/7 Support</h3> */
+
+/* Use JavaScript count-up animation. */
+
+/* 🎨 9. Gradient Text */
+.gradient-text{
+    background: linear-gradient(90deg,#00dbde,#fc00ff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+/* <h1 class="gradient-text">Bright Smiles, Better Lives</h1> */
+
+/* 🌟 10. Background Floating Bubbles
+
+Makes the page feel alive. */
+
+.circle{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,0.2);
+    animation: float 8s infinite;
+}
+/* Add several circles of different sizes. */
+
+
+/* 🔥 11. Before/After Smile Comparison Slider
+
+Very trendy for dental websites.
+
+Users can drag to compare: */
+/* Before Smile |-----Slider-----| After Smile */
+
+
+/* 🤖 12. AI-style Chat Widget
+
+A small floating chat icon in the bottom-right.
+
+Features:
+
+Ask Questions
+Book Appointment
+Clinic Timings
+Treatment Information
+
+Looks very modern. */
