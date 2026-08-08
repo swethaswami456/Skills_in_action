@@ -1,5 +1,5 @@
 function Online_Appointment() {
-    alert("Appointment booking feature coming soon!");
+    alert("Available by appointment and offline direct visit to clinic during open hours");
 }
 
 function In_person_Appointment() {

@@ -1,0 +1,21 @@
+.Contact {
+  position: relative;
+  background-color: #fff;   /* keep your existing color */
+  overflow: hidden;
+}
+
+.Contact::before {
+  content: "🦷";               /* emoji */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 200px;            /* adjust size */
+  color: rgba(0,0,0,0.05);     /* transparent shade */
+  z-index: 0;
+}
+
+.Contact * {
+  position: relative;
+  z-index: 1;                  /* keep text above emoji */
+}
