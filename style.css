@@ -56,17 +56,40 @@ nav a:hover {
     text-align: center;
     padding: 100px 20px;
     color: white;
-    background: linear-gradient(
-        /* rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2) */
+    /* background: linear-gradient(
         rgba(144, 202, 249, 1),
         rgba(33, 150, 243, .6)
-    );
+    ); */
+    animation-name: Hero_back_images;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+
+
+
+@keyframes Hero_back_images{
+    from {background-image:url("Capture2.JPG");}
+    /* to {background-image: url("Capture.JPG");
+        opacity: 0.3;}
+    to {background-image: url("Capture3.JPG");} */
+    to {background-image: url("CLINIC_front.JPG");}
+}
+
+@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1}}
+
+
+
 .hero h2 {
     font-size: 3rem;
     margin-bottom: 10px;
 }
+/* .hero h3 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+} */
 
 .hero p {
     font-size: 1.2rem;
@@ -78,13 +101,31 @@ nav a:hover {
     /* color: white; */
     background: linear-gradient(
         rgba(255, 255,255, 1),
-        rgba(255, 255,255, 1)
+        rgba(255, 255,255, 0.5)
     );
     align-items: center;
     display: flex;              /* enables side-by-side layout */
     gap: 20px; 
 }
- 
+
+
+/* Responsive fix for mobile */
+@media (max-width: 768px) {
+    .Contact {
+        flex-direction: column;   /* stack items vertically */
+    }
+    .map-container {
+        justify-content: center;  /* center the map on mobile */
+        margin-top: 20px;         /* add spacing between text and map */
+    }
+    .map-container iframe {
+        width: 100%;              /* make map responsive */
+        height: 300px;            /* adjust height for mobile */
+    }
+}
+
+
+
 .work-hours {
     flex: 1;  /* text takes available space */
     justify-content: space-around;  /* pushes work hours to the right */
@@ -132,6 +173,14 @@ section {
     backdrop-filter: blur(10px);
 }
 
+#Transformations {
+    background: linear-gradient(
+        rgba(255, 255,255, 1),
+        rgba(255, 255,255, 0.5)
+    );
+    backdrop-filter: blur(10px);
+}
+
 /* Service Cards */
 .service-card {
     background: rgba(255,255,255,0.85);
@@ -155,7 +204,7 @@ section {
 /* Footer */
 footer {
     text-align: center;
-    padding: 25px;
+    padding: 10px;
     background: linear-gradient(90deg, #141e30, #243b55);
     color: white;
 }
@@ -174,7 +223,96 @@ footer {
   position: relative;
   /* background-color: #fff;   keep your existing color */
   overflow: hidden;
+
 }
+
+/* Slideshow container */
+.Transformation {
+  width: 99%; 
+  overflow: hidden;       /* hide images outside the frame */
+  position: relative;
+  /* padding: 20px 50px 20px; */
+  /* max-height: 100%; */
+  max-width: 100%;   /*adjust as needed*/
+  margin: auto;
+  /* animation-name: transformation_anime;
+  animation-duration: 8s; */
+  height: 600px;  /* adjust height as needed */
+}
+
+.trans_button_left {
+    position: absolute;
+    /* margin: 100px 0px 0px 0px; */
+    top: 50%; 
+    left: 20px;   /* stick to left side */
+    /* transform: translateY(-50%); */
+  /* border-radius: 0 3px 3px 0; */
+}
+
+.trans_button_right {
+  position: absolute;
+  top: 50%; 
+  /* transform: translateY(-50%); */
+  /* transform: translateX(-100%); */
+  right: 60px;  /* stick to right side */
+  /* transform: translateX(-100%); */
+  /* border-radius: 3px 0 0 3px; */
+}
+
+
+
+
+.trans_img_cls {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  padding: 50px;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;                /* hidden by default */
+  transition: opacity 3s ease; /* smooth fade */
+}
+
+.trans_img_cls.active {
+  opacity: 1;                /* only active image fades in */
+}
+
+.Transformation h2 {
+    /* font-size: 3rem; */
+    margin-bottom: 10px;
+    margin-top: 10px;
+    /* align-items: center; */
+    text-align: center;
+}
+
+
+
+
+
+/* 
+.Transformation {
+  display: flex;           line up images horizontally
+  animation: slide 6s infinite; 5 images × 3s each = 15s cycle
+}
+
+@keyframes slide {
+  0%   { transform: translateX(0%); }
+  20%  { transform: translateX(0%); }
+  
+  25%  { transform: translateX(-100%); }
+  45%  { transform: translateX(-100%); }
+  
+  50%  { transform: translateX(-200%); }
+  70%  { transform: translateX(-200%); }
+  
+  75%  { transform: translateX(-300%); }
+  95%  { transform: translateX(-300%); }
+  
+  100% { transform: translateX(-400%); }
+} */
+
 /* .all-services::before {
   content: "🦷";
   position: absolute;
