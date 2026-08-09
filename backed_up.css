@@ -1,0 +1,12 @@
+.Transformation img {
+  /* width: 20%;            each image takes full width */
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  display: block;
+  /* flex-shrink: 0;          prevent shrinking */
+  object-fit: contain;
+  top:0;
+  animation:fading 10s infinite;
+}@keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+
